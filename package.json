@@ -1,0 +1,38 @@
+{
+  "name": "coworks_aws",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development webpack --config ./webpack/webpack.config.js --progress --colors --watch",
+    "start:prod": "cross-env NODE_ENV=production node ./dist/server.js",
+    "build": "rimraf dist && ./node_modules/.bin/cross-env NODE_ENV=development webpack --config ./webpack/webpack.config.js --progress --colors"
+  },
+  "repository": {
+    "url": "git@github.com:fforres/coworks_aws.git",
+    "type": "git"
+  },
+  "author": "fetorres <fetorres@groupon.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-polyfill": "^6.20.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "json-loader": "^0.5.4",
+    "node-sass": "^4.1.1",
+    "rimraf": "^2.5.4",
+    "sass-loader": "^4.1.1",
+    "snazzy": "^5.0.0",
+    "webpack": "v2.2.0-rc.2",
+    "webpack-node-externals": "^1.5.4"
+  },
+  "dependencies": {
+    "cross-env": "^3.1.3",
+    "express": "^4.14.0",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1"
+  }
+}
